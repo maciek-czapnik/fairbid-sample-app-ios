@@ -10,10 +10,14 @@ import UIKit
 class AdsScreenViewController: UIViewController {
 
     var adType: AdType!
-
-    private let interstitialPlacementID = "197405"
-    private let rewardedPlacementID = "197406"
-    private let bannerPlacementID = "197407"
+    
+    private let admobPmnInterstitialPlacementID = "442811"
+    private let admobPmnRewardedPlacementID = "442813"
+    private let admobPmnBannerPlacementID = "442815"
+    
+    private let secondAdmobPmnInterstitialPlacementID = "442812"
+    private let secondAdmobPmnRewardedPlacementID = "442814"
+    private let secondAdmobPmnBannerPlacementID = "442816"
 
     let formatter = DateFormatter()
 
@@ -50,20 +54,37 @@ class AdsScreenViewController: UIViewController {
         switch adType! {
         case .interstitial:
             FYBInterstitial.delegate = self
-            placementIdLabel.text = interstitialPlacementID
-            if FYBInterstitial.isAvailable(interstitialPlacementID) {
+            placementIdLabel.text = admobPmnInterstitialPlacementID
+            if FYBInterstitial.isAvailable(admobPmnInterstitialPlacementID) {
                 adIsAvailable()
             }
         case .rewarded:
             FYBRewarded.delegate = self
-            placementIdLabel.text = rewardedPlacementID
-            if FYBRewarded.isAvailable(rewardedPlacementID) {
+            placementIdLabel.text = admobPmnRewardedPlacementID
+            if FYBRewarded.isAvailable(admobPmnRewardedPlacementID) {
                 adIsAvailable()
             }
         case .banner:
             FYBBanner.delegate = self
-            placementIdLabel.text = bannerPlacementID
+            placementIdLabel.text = admobPmnBannerPlacementID
+        case .second_interstitial:
+            FYBInterstitial.delegate = self
+            placementIdLabel.text = secondAdmobPmnInterstitialPlacementID
+            if FYBInterstitial.isAvailable(secondAdmobPmnInterstitialPlacementID) {
+                adIsAvailable()
+            }
+        case .second_rewarded:
+            FYBRewarded.delegate = self
+            placementIdLabel.text = secondAdmobPmnRewardedPlacementID
+            if FYBRewarded.isAvailable(secondAdmobPmnRewardedPlacementID) {
+                adIsAvailable()
+            }
+        case .second_banner:
+            FYBBanner.delegate = self
+            placementIdLabel.text = secondAdmobPmnBannerPlacementID
         }
+        
+        
 
         if adType! == .banner {
             requestButton.setTitle("Show", for: .normal)
@@ -88,13 +109,22 @@ class AdsScreenViewController: UIViewController {
     @IBAction func requestAdClicked(_ sender: Any) {
         switch adType! {
         case .interstitial:
-            FYBInterstitial.request(interstitialPlacementID)
+            FYBInterstitial.request(admobPmnInterstitialPlacementID)
         case .rewarded:
-            FYBRewarded.request(rewardedPlacementID)
+            FYBRewarded.request(admobPmnRewardedPlacementID)
         case .banner:
             let bannerOptions = FYBBannerOptions()
-            bannerOptions.placementId = bannerPlacementID
+            bannerOptions.placementId = admobPmnBannerPlacementID
 
+            FYBBanner.show(in: bannerView, position: .top, options: bannerOptions)
+        case .second_interstitial:
+            FYBInterstitial.request(secondAdmobPmnInterstitialPlacementID)
+        case .second_rewarded:
+            FYBRewarded.request(secondAdmobPmnRewardedPlacementID)
+        case .second_banner:
+            let bannerOptions = FYBBannerOptions()
+            bannerOptions.placementId = secondAdmobPmnBannerPlacementID
+            
             FYBBanner.show(in: bannerView, position: .top, options: bannerOptions)
         }
 
@@ -104,10 +134,17 @@ class AdsScreenViewController: UIViewController {
     @IBAction func showOrDestroyAdClicked(_ sender: Any) {
         switch adType! {
         case .interstitial:
-            FYBInterstitial.show(interstitialPlacementID)
+            FYBInterstitial.show(admobPmnInterstitialPlacementID)
         case .rewarded:
-            FYBRewarded.show(rewardedPlacementID)
+            FYBRewarded.show(admobPmnRewardedPlacementID)
         case .banner:
+            banner?.removeFromSuperview()
+            adDismissed()
+        case .second_interstitial:
+            FYBInterstitial.show(secondAdmobPmnInterstitialPlacementID)
+        case .second_rewarded:
+            FYBRewarded.show(secondAdmobPmnRewardedPlacementID)
+        case .second_banner:
             banner?.removeFromSuperview()
             adDismissed()
         }

@@ -6,12 +6,35 @@
 
 import FairBidSDK
 import UIKit
+import AppTrackingTransparency
 
 class ViewController: UIViewController {
 
     @IBOutlet var adUnitsTable: UITableView!
     @IBOutlet var versionLabel: UILabel!
 
+    @IBAction func promptIDFA(_ sender: Any) {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                var statusString = ""
+                switch status {
+                case .notDetermined:
+                    statusString = "notDetermined"
+                case .restricted:
+                    statusString = "restricted"
+                case .denied:
+                    statusString = "denied"
+                case .authorized:
+                    statusString = "authorized"
+                @unknown default:
+                    print("should happened but it happened")
+                }
+                print("Tracking authorization status: " + statusString)
+            }
+        } else {
+            print("we are on iOS < 14")
+        }
+    }
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
@@ -44,7 +67,7 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return 6
         } else {
             return 1
         }
