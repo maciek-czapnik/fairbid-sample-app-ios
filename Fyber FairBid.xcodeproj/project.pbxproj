@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,8 @@
 		2A528C63225A39E300AD37E7 /* AdsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A528C62225A39E300AD37E7 /* AdsScreenViewController.swift */; };
 		2D0CD72D23312BF800D6168A /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CD72C23312BF800D6168A /* HeadlineTableViewCell.swift */; };
 		2D0CD72F23312C1900D6168A /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CD72E23312C1900D6168A /* AdType.swift */; };
-		31E2A320BA62D12E9EC9EA94 /* Pods_DT_FairBid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FB1D68824A899F38B3F9D /* Pods_DT_FairBid.framework */; };
+		54B4BCCE287C386F00F0CB06 /* APSSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4BCCD287C386F00F0CB06 /* APSSupport.swift */; };
+		CE99D695C9C9D0FAE3CB3D43 /* Pods_DT_FairBid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFFD2A21231210BE6C52F11 /* Pods_DT_FairBid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +27,13 @@
 		11F8A9492247E91500A816F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F8A94C2247E91500A816F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F8A94E2247E91500A816F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B287D7FFFBE9E0C58D9F6A /* Pods-DT FairBid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DT FairBid.release.xcconfig"; path = "Target Support Files/Pods-DT FairBid/Pods-DT FairBid.release.xcconfig"; sourceTree = "<group>"; };
 		2A528C62225A39E300AD37E7 /* AdsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsScreenViewController.swift; sourceTree = "<group>"; };
 		2D0CD72C23312BF800D6168A /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
 		2D0CD72E23312C1900D6168A /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
-		3F8240ABD5456A3E8EEEF007 /* Pods-Fyber FairBid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fyber FairBid.release.xcconfig"; path = "Target Support Files/Pods-Fyber FairBid/Pods-Fyber FairBid.release.xcconfig"; sourceTree = "<group>"; };
-		7EB0E3618AAD683130F98B70 /* Pods-DT FairBid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DT FairBid.release.xcconfig"; path = "Target Support Files/Pods-DT FairBid/Pods-DT FairBid.release.xcconfig"; sourceTree = "<group>"; };
-		82D89D7DDF5E68503AA1C725 /* Pods-DT FairBid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DT FairBid.debug.xcconfig"; path = "Target Support Files/Pods-DT FairBid/Pods-DT FairBid.debug.xcconfig"; sourceTree = "<group>"; };
-		AE059D1CAF1D6E9D47405828 /* Pods-Fyber FairBid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fyber FairBid.debug.xcconfig"; path = "Target Support Files/Pods-Fyber FairBid/Pods-Fyber FairBid.debug.xcconfig"; sourceTree = "<group>"; };
-		B87FB1D68824A899F38B3F9D /* Pods_DT_FairBid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DT_FairBid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BC75C137237667B81C38A6 /* Pods-DT FairBid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DT FairBid.debug.xcconfig"; path = "Target Support Files/Pods-DT FairBid/Pods-DT FairBid.debug.xcconfig"; sourceTree = "<group>"; };
+		54B4BCCD287C386F00F0CB06 /* APSSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APSSupport.swift; sourceTree = "<group>"; };
+		EDFFD2A21231210BE6C52F11 /* Pods_DT_FairBid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DT_FairBid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E2A320BA62D12E9EC9EA94 /* Pods_DT_FairBid.framework in Frameworks */,
+				CE99D695C9C9D0FAE3CB3D43 /* Pods_DT_FairBid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 				11F8A9412247E91400A816F2 /* Fyber FairBid */,
 				11F8A9402247E91400A816F2 /* Products */,
 				32ABDC3DBDD0662A5E9B6072 /* Pods */,
-				210289A805BBD5E9FA8D783A /* Frameworks */,
+				E171DDA856B84B1B525A7641 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +69,7 @@
 		11F8A9412247E91400A816F2 /* Fyber FairBid */ = {
 			isa = PBXGroup;
 			children = (
+				54B4BCCD287C386F00F0CB06 /* APSSupport.swift */,
 				2D0CD72E23312C1900D6168A /* AdType.swift */,
 				11F8A9422247E91400A816F2 /* AppDelegate.swift */,
 				11F8A9442247E91400A816F2 /* ViewController.swift */,
@@ -82,23 +83,21 @@
 			path = "Fyber FairBid";
 			sourceTree = "<group>";
 		};
-		210289A805BBD5E9FA8D783A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B87FB1D68824A899F38B3F9D /* Pods_DT_FairBid.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		32ABDC3DBDD0662A5E9B6072 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AE059D1CAF1D6E9D47405828 /* Pods-Fyber FairBid.debug.xcconfig */,
-				3F8240ABD5456A3E8EEEF007 /* Pods-Fyber FairBid.release.xcconfig */,
-				82D89D7DDF5E68503AA1C725 /* Pods-DT FairBid.debug.xcconfig */,
-				7EB0E3618AAD683130F98B70 /* Pods-DT FairBid.release.xcconfig */,
+				51BC75C137237667B81C38A6 /* Pods-DT FairBid.debug.xcconfig */,
+				28B287D7FFFBE9E0C58D9F6A /* Pods-DT FairBid.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E171DDA856B84B1B525A7641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDFFD2A21231210BE6C52F11 /* Pods_DT_FairBid.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,12 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F8A9672247E91500A816F2 /* Build configuration list for PBXNativeTarget "DT FairBid" */;
 			buildPhases = (
-				27DE8565C131B172B5FF0E03 /* [CP] Check Pods Manifest.lock */,
+				F613A6F826F567B4D39C9338 /* [CP] Check Pods Manifest.lock */,
 				AE7457C625A7506200EB3831 /* ShellScript */,
 				11F8A93B2247E91400A816F2 /* Sources */,
 				11F8A93C2247E91400A816F2 /* Frameworks */,
 				11F8A93D2247E91400A816F2 /* Resources */,
-				538A18AD5B765F3A5914AC95 /* [CP] Embed Pods Frameworks */,
+				18BFD6A049B798745759B641 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,29 +171,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27DE8565C131B172B5FF0E03 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DT FairBid-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		538A18AD5B765F3A5914AC95 /* [CP] Embed Pods Frameworks */ = {
+		18BFD6A049B798745759B641 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +205,28 @@
 			shellPath = /bin/sh;
 			shellScript = "if command -v skad_updater &> /dev/null\nthen\necho \"$INFOPLIST_FILE\" | sed 's/ /\\\\ /g' | (read SANITIZED_PATH; skad_updater --plist_file_path \"$SANITIZED_PATH\" --network_list=FairBidSDK --pod_file_path ./Podfile; plutil -convert xml1 \"$SANITIZED_PATH\")\nelse\necho \"warning: 'skad_updater' not found. More information: https://github.com/fyber-engineering/SKAd_updater\"\nfi\n";
 		};
+		F613A6F826F567B4D39C9338 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DT FairBid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -235,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B4BCCE287C386F00F0CB06 /* APSSupport.swift in Sources */,
 				2D0CD72F23312C1900D6168A /* AdType.swift in Sources */,
 				11F8A9452247E91400A816F2 /* ViewController.swift in Sources */,
 				11F8A9432247E91400A816F2 /* AppDelegate.swift in Sources */,
@@ -385,7 +385,7 @@
 		};
 		11F8A9682247E91500A816F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82D89D7DDF5E68503AA1C725 /* Pods-DT FairBid.debug.xcconfig */;
+			baseConfigurationReference = 51BC75C137237667B81C38A6 /* Pods-DT FairBid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -412,7 +412,7 @@
 		};
 		11F8A9692247E91500A816F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EB0E3618AAD683130F98B70 /* Pods-DT FairBid.release.xcconfig */;
+			baseConfigurationReference = 28B287D7FFFBE9E0C58D9F6A /* Pods-DT FairBid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

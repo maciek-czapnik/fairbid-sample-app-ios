@@ -12,8 +12,8 @@ class AdsScreenViewController: UIViewController {
     var adType: AdType!
 
     private let interstitialPlacementID = "197405"
-    private let rewardedPlacementID = "197406"
-    private let bannerPlacementID = "197407"
+    private let rewardedPlacementID = "197406" // 771001 APS BAN2
+    private let bannerPlacementID = "771001" // 770955 APS BAN1
 
     let formatter = DateFormatter()
 
