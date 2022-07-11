@@ -11,9 +11,8 @@ class AdsScreenViewController: UIViewController {
 
     var adType: AdType!
 
-    private let interstitialPlacementID = "197405"
-    private let rewardedPlacementID = "197406" // 771001 APS BAN2
-    private let bannerPlacementID = "771001" // 770955 APS BAN1
+    private let banner1PlacementID = "770955" // 770955 APS BAN1
+    private let banner2PlacementID = "771001" // 771001 APS BAN2
 
     let formatter = DateFormatter()
 
@@ -48,33 +47,17 @@ class AdsScreenViewController: UIViewController {
 
         showButton.disable()
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.delegate = self
-            placementIdLabel.text = interstitialPlacementID
-            if FYBInterstitial.isAvailable(interstitialPlacementID) {
-                adIsAvailable()
-            }
-        case .rewarded:
-            FYBRewarded.delegate = self
-            placementIdLabel.text = rewardedPlacementID
-            if FYBRewarded.isAvailable(rewardedPlacementID) {
-                adIsAvailable()
-            }
         case .banner:
             FYBBanner.delegate = self
-            placementIdLabel.text = bannerPlacementID
+            placementIdLabel.text = banner1PlacementID
+        case .banner2:
+            FYBBanner.delegate = self
+            placementIdLabel.text = banner2PlacementID
         }
-
-        if adType! == .banner {
-            requestButton.setTitle("Show", for: .normal)
-            showButton.setTitle("Destroy", for: .normal)
-        } else {
-            requestButton.setTitle("Request", for: .normal)
-            showButton.setTitle("Show", for: .normal)
-
-            bannerView.removeFromSuperview()
-        }
-
+        
+        requestButton.setTitle("Show", for: .normal)
+        showButton.setTitle("Destroy", for: .normal)
+        
         callBacksTableView.tableFooterView = UIView(frame: .zero)
 
         title = adType.rawValue
@@ -87,13 +70,14 @@ class AdsScreenViewController: UIViewController {
 
     @IBAction func requestAdClicked(_ sender: Any) {
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.request(interstitialPlacementID)
-        case .rewarded:
-            FYBRewarded.request(rewardedPlacementID)
         case .banner:
             let bannerOptions = FYBBannerOptions()
-            bannerOptions.placementId = bannerPlacementID
+            bannerOptions.placementId = banner1PlacementID
+
+            FYBBanner.show(in: bannerView, position: .top, options: bannerOptions)
+        case .banner2:
+            let bannerOptions = FYBBannerOptions()
+            bannerOptions.placementId = banner2PlacementID
 
             FYBBanner.show(in: bannerView, position: .top, options: bannerOptions)
         }
@@ -103,11 +87,10 @@ class AdsScreenViewController: UIViewController {
 
     @IBAction func showOrDestroyAdClicked(_ sender: Any) {
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.show(interstitialPlacementID)
-        case .rewarded:
-            FYBRewarded.show(rewardedPlacementID)
         case .banner:
+            banner?.removeFromSuperview()
+            adDismissed()
+        case .banner2:
             banner?.removeFromSuperview()
             adDismissed()
         }

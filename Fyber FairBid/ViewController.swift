@@ -44,7 +44,7 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return 2
         } else {
             return 1
         }
