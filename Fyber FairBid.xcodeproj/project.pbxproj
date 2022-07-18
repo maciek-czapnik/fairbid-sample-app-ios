@@ -15,10 +15,25 @@
 		2A528C63225A39E300AD37E7 /* AdsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A528C62225A39E300AD37E7 /* AdsScreenViewController.swift */; };
 		2D0CD72D23312BF800D6168A /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CD72C23312BF800D6168A /* HeadlineTableViewCell.swift */; };
 		2D0CD72F23312C1900D6168A /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CD72E23312C1900D6168A /* AdType.swift */; };
-		54A3125028800F0C00A5D73A /* FairBidSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A3124F28800F0C00A5D73A /* FairBidSDK.xcframework */; };
+		545029052885525D0061D534 /* FairBidSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A3124F28800F0C00A5D73A /* FairBidSDK.xcframework */; };
+		545029062885525D0061D534 /* FairBidSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54A3124F28800F0C00A5D73A /* FairBidSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54B4BCCE287C386F00F0CB06 /* APSSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4BCCD287C386F00F0CB06 /* APSSupport.swift */; };
 		CE99D695C9C9D0FAE3CB3D43 /* Pods_DT_FairBid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFFD2A21231210BE6C52F11 /* Pods_DT_FairBid.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		545029072885525D0061D534 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				545029062885525D0061D534 /* FairBidSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11F8A93F2247E91400A816F2 /* DT FairBid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DT FairBid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A3125028800F0C00A5D73A /* FairBidSDK.xcframework in Frameworks */,
+				545029052885525D0061D534 /* FairBidSDK.xcframework in Frameworks */,
 				AB23BC83FCDB6092FCAF6988 /* Pods_Fyber_FairBid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +132,8 @@
 				11F8A93B2247E91400A816F2 /* Sources */,
 				11F8A93C2247E91400A816F2 /* Frameworks */,
 				11F8A93D2247E91400A816F2 /* Resources */,
-				18BFD6A049B798745759B641 /* [CP] Embed Pods Frameworks */,
+				538A18AD5B765F3A5914AC95 /* [CP] Embed Pods Frameworks */,
+				545029072885525D0061D534 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
