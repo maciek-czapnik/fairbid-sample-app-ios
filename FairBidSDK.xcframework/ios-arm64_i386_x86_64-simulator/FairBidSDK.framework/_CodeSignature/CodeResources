@@ -6,7 +6,7 @@
 	<dict>
 		<key>FairBidSDKResources.bundle/Assets.car</key>
 		<data>
-		+6sbEFd0Q9HJKV2ABXfLe4fnmMw=
+		hrTFvtvG/mQFB2puPqhIFsnP1Rw=
 		</data>
 		<key>FairBidSDKResources.bundle/FYBTestSuiteLaunchViewController.nib</key>
 		<data>
@@ -142,11 +142,11 @@
 		</data>
 		<key>FairBidSDKResources.bundle/Info.plist</key>
 		<data>
-		cauqUR+OHELg+RNc1gsrfZ+41eQ=
+		ZVHGbWKC/ADsg4N7/wiTnI/duck=
 		</data>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		I6WldDFHGYzKJKXtOD7SWmTgIqA=
+		PKBTEF47aFfK+YMh3RDVi3rEsag=
 		</data>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -154,11 +154,11 @@
 		</data>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		hNwOEE6B+qm5es+Am9kMVm24jVU=
+		UamKi339KozBLzqfzqNPDWrf1Pg=
 		</data>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		h6uqUZOpdV+gF6Q9JW+LcvX39Uo=
+		EJRPnFoCrkyPans2sTRfxQmwgtE=
 		</data>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -346,7 +346,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZWVStdnPqbr9dPsWcZlERrewY/I=
+		fHxZ3HhcX92RNiv0qsPYeDRBdns=
 		</data>
 		<key>Modules/FairBidSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -395,11 +395,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+6sbEFd0Q9HJKV2ABXfLe4fnmMw=
+			hrTFvtvG/mQFB2puPqhIFsnP1Rw=
 			</data>
 			<key>hash2</key>
 			<data>
-			+x0yUpAaet3ei4RPW23DcyYpK75DQYnGScLMKWy0/uY=
+			+N3TXP+PNB1B+7mz/X37MsR+CouXgYjHLp2G7LkB1AA=
 			</data>
 		</dict>
 		<key>FairBidSDKResources.bundle/FYBTestSuiteLaunchViewController.nib</key>
@@ -769,22 +769,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cauqUR+OHELg+RNc1gsrfZ+41eQ=
+			ZVHGbWKC/ADsg4N7/wiTnI/duck=
 			</data>
 			<key>hash2</key>
 			<data>
-			rZQRGtPb259I+X9nGBmC/t/Jd7E9eaQDHtjoxq6oyzY=
+			Ye8imMynDoPwt8k2SDFQZNT3m2Y0azqPNpOTyGPNZa4=
 			</data>
 		</dict>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I6WldDFHGYzKJKXtOD7SWmTgIqA=
+			PKBTEF47aFfK+YMh3RDVi3rEsag=
 			</data>
 			<key>hash2</key>
 			<data>
-			2bIPNo00+/YEUEmFRVLx2ptL6r08VfzIfN+F/5ws81o=
+			ORZXtxvKT0tX9CsK8jCnmWlklVYbpnmd+08QQ6YVZM0=
 			</data>
 		</dict>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -802,22 +802,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hNwOEE6B+qm5es+Am9kMVm24jVU=
+			UamKi339KozBLzqfzqNPDWrf1Pg=
 			</data>
 			<key>hash2</key>
 			<data>
-			PYmXQFtO8TTwk1khi8GF/siaMhGnR4ndOlN4HfEVWSo=
+			/yAS+UzZdqFFxgf49A1NjLfyZatoJwQd7AkSZ1GdzAI=
 			</data>
 		</dict>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h6uqUZOpdV+gF6Q9JW+LcvX39Uo=
+			EJRPnFoCrkyPans2sTRfxQmwgtE=
 			</data>
 			<key>hash2</key>
 			<data>
-			7JX6/rWjqvnNs0jTVaIiBzhaJLk1oX99Cp6uznUu7vI=
+			EqM4on+n7UIc3kRqLigT3UTPUek7coe2POQIkj35LkA=
 			</data>
 		</dict>
 		<key>FairBidSDKResources.bundle/_CodeSignature/CodeSignature</key>
