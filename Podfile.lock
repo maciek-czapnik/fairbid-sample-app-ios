@@ -1,16 +1,34 @@
 PODS:
   - FairBidSDK (3.31.2)
+  - HyBid (2.15.0):
+    - HyBid/Banner (= 2.15.0)
+    - HyBid/Core (= 2.15.0)
+    - HyBid/FullScreen (= 2.15.0)
+    - HyBid/Native (= 2.15.0)
+    - HyBid/RewardedVideo (= 2.15.0)
+  - HyBid/Banner (2.15.0):
+    - HyBid/Core
+  - HyBid/Core (2.15.0)
+  - HyBid/FullScreen (2.15.0):
+    - HyBid/Core
+  - HyBid/Native (2.15.0):
+    - HyBid/Core
+  - HyBid/RewardedVideo (2.15.0):
+    - HyBid/Core
 
 DEPENDENCIES:
   - FairBidSDK (= 3.31.2)
+  - HyBid (= 2.15.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - FairBidSDK
+    - HyBid
 
 SPEC CHECKSUMS:
   FairBidSDK: ce7ee2ab4c00995a0400a7f849e2f795d6bd55c5
+  HyBid: 96e27754d8156a0e0f084153126b0d10a0a58736
 
-PODFILE CHECKSUM: 486684987a9f031be38c0119c1d82df8c3d96e7d
+PODFILE CHECKSUM: d43c9cdb88d65119fe7983a26ea13201c41845e9
 
 COCOAPODS: 1.11.3

@@ -4,4 +4,5 @@ platform :ios, '10.0'
 
 target 'DT FairBid' do
   pod 'FairBidSDK', '3.31.2'
+  pod 'HyBid', '2.15.0'
 end
