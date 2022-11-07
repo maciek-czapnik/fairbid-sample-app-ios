@@ -1,9 +1,9 @@
 PODS:
-  - AmazonPublisherServicesSDK (4.4.1)
+  - AmazonPublisherServicesSDK (4.5.5)
   - FairBidSDK (3.32.1)
 
 DEPENDENCIES:
-  - AmazonPublisherServicesSDK (= 4.4.1)
+  - AmazonPublisherServicesSDK (= 4.5.5)
   - FairBidSDK (= 3.32.1)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - FairBidSDK
 
 SPEC CHECKSUMS:
-  AmazonPublisherServicesSDK: 1fcbee95498e72450fc27b1ec1fe145c85785ae3
+  AmazonPublisherServicesSDK: a1e1dbf455266de502e0dfe6ed32111dc8456b6b
   FairBidSDK: cf653fd5fd450cd7b98cfad2e0b8715abb3b25f9
 
-PODFILE CHECKSUM: 82fc6a82d5bf5f9990426728bf69afb7037b6fa4
+PODFILE CHECKSUM: c37b78f0be28db993b6f7cb5d26383f44763b717
 
 COCOAPODS: 1.11.3
