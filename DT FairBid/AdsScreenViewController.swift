@@ -11,10 +11,8 @@ class AdsScreenViewController: UIViewController {
 
     var adType: AdType!
 
-    private let interstitialPlacementID = "197405"
-    private let rewardedPlacementID = "197406"
-    private let bannerPlacementID = "197407"
-    private let mrecPlacementID = "936586"
+    private let bannerPlacementID = "213774"
+    private let bannerAdaptivePlacementID = "213777"
 
     let formatter = DateFormatter()
 
@@ -49,38 +47,16 @@ class AdsScreenViewController: UIViewController {
 
         showButton.disable()
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.delegate = self
-            placementIdLabel.text = interstitialPlacementID
-            if FYBInterstitial.isAvailable(interstitialPlacementID) {
-                adIsAvailable()
-            }
-        case .rewarded:
-            FYBRewarded.delegate = self
-            placementIdLabel.text = rewardedPlacementID
-            if FYBRewarded.isAvailable(rewardedPlacementID) {
-                adIsAvailable()
-            }
-        case .banner:
-            FYBBanner.delegate = self
-            placementIdLabel.text = bannerPlacementID
-        case .mrec:
-            FYBBanner.delegate = self
-            placementIdLabel.text = mrecPlacementID
+            case .banner:
+                FYBBanner.delegate = self
+                placementIdLabel.text = bannerPlacementID
+            case .bannerAdaptive:
+                FYBBanner.delegate = self
+                placementIdLabel.text = bannerAdaptivePlacementID + " adaptive"
         }
 
-        if adType! == .banner {
-            requestButton.setTitle("Show", for: .normal)
-            showButton.setTitle("Destroy", for: .normal)
-        } else if adType! == .mrec {
-            requestButton.setTitle("Show", for: .normal)
-            showButton.setTitle("Destroy", for: .normal)
-        } else {
-            requestButton.setTitle("Request", for: .normal)
-            showButton.setTitle("Show", for: .normal)
-
-            bannerView.removeFromSuperview()
-        }
+        requestButton.setTitle("Show", for: .normal)
+        showButton.setTitle("Destroy", for: .normal)
 
         callBacksTableView.tableFooterView = UIView(frame: .zero)
 
@@ -94,31 +70,24 @@ class AdsScreenViewController: UIViewController {
 
     @IBAction func requestAdClicked(_ sender: Any) {
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.request(interstitialPlacementID)
-        case .rewarded:
-            FYBRewarded.request(rewardedPlacementID)
-        case .banner:
-            let bannerOptions = FYBBannerOptions(placementId: bannerPlacementID, size: .smart)
-            FYBBanner.show(in: bannerView, options: bannerOptions)
-        case .mrec:
-            let mrecOptions = FYBBannerOptions(placementId: mrecPlacementID, size: .MREC)
-            FYBBanner.show(in: bannerView, options: mrecOptions)
+            case .banner:
+                let bannerOptions = FYBBannerOptions(placementId: bannerPlacementID, position: .top)
+                bannerOptions.adaptive = false
+                FYBBanner.show(in: nil, options: bannerOptions)
+            case .bannerAdaptive:
+                let bannerOptions = FYBBannerOptions(placementId: bannerPlacementID, position: .top)
+                bannerOptions.adaptive = true
+                FYBBanner.show(in: nil, options: bannerOptions)
         }
-
         fetchingInProgress()
     }
 
     @IBAction func showOrDestroyAdClicked(_ sender: Any) {
         switch adType! {
-        case .interstitial:
-            FYBInterstitial.show(interstitialPlacementID)
-        case .rewarded:
-            FYBRewarded.show(rewardedPlacementID)
         case .banner:
             banner?.removeFromSuperview()
             adDismissed()
-        case .mrec:
+        case .bannerAdaptive:
             banner?.removeFromSuperview()
             adDismissed()
         }
@@ -188,88 +157,6 @@ extension AdsScreenViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Callback cell", for: indexPath)
         cell.textLabel?.text = callbackStrings[indexPath.row]
         return cell
-    }
-
-}
-
-extension AdsScreenViewController: FYBInterstitialDelegate {
-
-    func interstitialIsAvailable(_ placementName: String) {
-        addEventToCallbacksList(#function)
-        adIsAvailable()
-    }
-
-    func interstitialIsUnavailable(_ placementName: String) {
-        adDismissed()
-        addEventToCallbacksList(#function)
-    }
-
-    func interstitialDidShow(_ placementName: String, impressionData: FYBImpressionData) {
-        addEventToCallbacksList(#function)
-    }
-    
-    func interstitialDidFail(toShow placementId: String, withError error: Error, impressionData: FYBImpressionData) {
-        addEventToCallbacksList(#function)
-    }
-
-    func interstitialDidClick(_ placementName: String) {
-        addEventToCallbacksList(#function)
-    }
-
-    func interstitialDidDismiss(_ placementName: String) {
-        adDismissed()
-        addEventToCallbacksList(#function)
-    }
-
-    func interstitialWillStartAudio() {
-        addEventToCallbacksList(#function)
-    }
-
-    func interstitialDidFinishAudio() {
-        addEventToCallbacksList(#function)
-    }
-
-}
-
-extension AdsScreenViewController: FYBRewardedDelegate {
-
-    func rewardedIsAvailable(_ placementName: String) {
-        adIsAvailable()
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedIsUnavailable(_ placementName: String) {
-        adDismissed()
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidShow(_ placementName: String, impressionData: FYBImpressionData) {
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidFail(toShow placementName: String, withError error: Error) {
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidClick(_ placementName: String) {
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidComplete(_ placementName: String, userRewarded: Bool) {
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidDismiss(_ placementName: String) {
-        adDismissed()
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedWillStartAudio() {
-        addEventToCallbacksList(#function)
-    }
-
-    func rewardedDidFinishAudio() {
-        addEventToCallbacksList(#function)
     }
 
 }
